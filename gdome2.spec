@@ -122,7 +122,7 @@ oprogramowania opartego o gdome2.
 
 %build
 rm -f missing
-libtoolize --copy --force
+%{__libtoolize}
 aclocal
 %{__autoconf}
 automake -a -c
