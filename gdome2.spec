@@ -1,13 +1,12 @@
 #
 # Conditional build:
-# (to be changed to bcond_with when glib2 support is finished)
 %bcond_with	glib1	# use glib 1.2 instead of 2.x
 #
 Summary:	DOM level2 library for accessing XML files
 Summary(pl):	Biblioteka dostêpu do plików XML, DOM poziom 2
 Name:		gdome2
 Version:	0.8.1
-Release:	1
+Release:	2
 License:	LGPL
 Group:		Libraries
 Source0:	http://gdome2.cs.unibo.it/tarball/%{name}-%{version}.tar.gz
@@ -129,7 +128,6 @@ oprogramowania opartego o gdome2.
 %{?with_glib1:echo 'AM_DEFUN([AM_PATH_GLIB_2_0], [$3]' >> acinclude.m4}
 
 %build
-#rm -f missing
 %{__libtoolize}
 %{__aclocal}
 %{__autoconf}
