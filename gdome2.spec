@@ -124,7 +124,7 @@ oprogramowania opartego o gdome2.
 rm -f missing
 libtoolize --copy --force
 aclocal
-autoconf
+%{__autoconf}
 automake -a -c
 
 %configure
