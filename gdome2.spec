@@ -16,10 +16,11 @@ URL:		http://gdome2.cs.unibo.it/
 BuildRequires:	autoconf
 BuildRequires:	automake
 %{?with_glib1:BuildRequires:	glib-devel >= 1.2.10}
-%{!?with_glib1:BuildRequires:	glib2-devel}
+%{!?with_glib1:BuildRequires:	glib2-devel >= 2.2.0}
 BuildRequires:	libtool
 BuildRequires:	libxml2-devel >= 2.4.26
 %{?with_glib1:Requires:	glib >= 1.2.10}
+%{!?with_glib1:Requires:	glib2 >= 2.2.0}
 Requires:	libxml2 >= 2.4.26
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -64,8 +65,8 @@ Summary(pl):	Pliki nag³ówkowe gdome2
 Group:		Development/Libraries
 Requires:	%{name} = %{version}
 %{?with_glib1:Requires:	glib-devel >= 1.2.10}
-%{!?with_glib1:Requires:	glib2-devel}
-Requires:	libxml2-devel >= 2.4.21
+%{!?with_glib1:Requires:	glib2-devel >= 2.2.0}
+Requires:	libxml2-devel >= 2.4.26
 
 %description devel
 This package contains the header files and configuration scripts for
@@ -124,14 +125,18 @@ oprogramowania opartego o gdome2.
 %prep
 %setup -q
 
+%{!?with_glib1:echo 'AM_DEFUN([AM_PATH_GLIB], [$3])' >> acinclude.m4}
+%{?with_glib1:echo 'AM_DEFUN([AM_PATH_GLIB_2_0], [$3]' >> acinclude.m4}
+
 %build
-rm -f missing
+#rm -f missing
 %{__libtoolize}
 %{__aclocal}
 %{__autoconf}
 %{__automake}
 %configure \
-	%{!?with_glib1:GLIB_CONFIG="pkg-config glib-2.0" --enable-glib-2}
+	%{!?with_glib1:GLIB_CONFIG="pkg-config glib-2.0"} \
+	%{?with_glib1:--enable-glib-1}
 
 %{__make}
 
