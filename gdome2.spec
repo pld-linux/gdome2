@@ -8,13 +8,13 @@ Group:		Libraries
 URL:		http://gdome2.cs.unibo.it/
 Source0:	http://gdome2.cs.unibo.it/tarball/%{name}-%{version}.tar.gz
 Patch0:		%{name}-ac.patch
-BuildRequires:	libxml2-devel >= 2.4.21
+BuildRequires:	libxml2-devel >= 2.4.26
 BuildRequires:	glib-devel >= 1.2.10
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	libtool
 Requires:	glib >= 1.2.10
-Requires:	libxml2 >= 2.4.19
+Requires:	libxml2 >= 2.4.26
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
