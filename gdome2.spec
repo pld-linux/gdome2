@@ -42,21 +42,21 @@ Now gdome2 also partially supports the XPath module from the DOM level
 3 drafts.
 
 %description -l pl
-gdome2 jest szybk±, lekk± i kompletn± implementacj± DOM poziom 2
+gdome2 jest szybk±, lekk± i kompletn± implementacj± poziomu 2 DOM
 opart± o libxml2. Pomimo, ¿e gdome2 zosta³o napisane z my¶l± o
-projekcie GNOME mo¿e byæ u¿ywane samodzielnie.
+projekcie GNOME, mo¿e byæ u¿ywane samodzielnie.
 
 Implementacja DOM (zwana równie¿ implementacj± hosta) udostêpnia
-przeparsowany dokument XML lub HTML dla dalszego przetwarzania poprzez
-interfejs DOM.
+przeanalizowany sk³adniowo dokument XML lub HTML w celu dalszego
+jego przetwarzania poprzez interfejs DOM.
 
 gdome2 w chwili obecnej wspiera nastêpuj±ce modu³y rekomendacji DOM2:
 "Core", "XML", "Events" oraz "MutationEvents" (wiêcej informacji mo¿na
 uzyskaæ pod adresem http://www.w3.org/TR/DOM-Level-2-Core/ oraz
 http://www.w3.org/TR/DOM-Level-2-Events/), a w przysz³o¶ci ma zostaæ
-pe³n± implementacj± standardu DOM Poziom 2.
+pe³n± implementacj± standardu poziomu 2 DOM.
 
-gdome2 wspiera równie¿ czê¶ciowo DOM Poziom 3, konkretnie XPath.
+gdome2 wspiera równie¿ czê¶ciowo poziom 3 DOM, konkretnie XPath.
 
 %package devel
 Summary:	Development files for gdome2
@@ -92,21 +92,21 @@ Now gdome2 also partially supports the XPath module from the DOM level
 Pakiet ten zawiera pliki nag³ówkowe oraz skrypty konfiguracyjne
 potrzebne do rozwijania oprogramowania opartego o gdome2.
 
-gdome2 jest szybk±, lekk± i kompletn± implementacj± DOM poziom 2
+gdome2 jest szybk±, lekk± i kompletn± implementacj± poziomu 2 DOM
 opart± o libxml2. Pomimo, ¿e gdome2 zosta³o napisane z my¶l± o
-projekcie GNOME mo¿e byæ u¿ywane samodzielnie.
+projekcie GNOME, mo¿e byæ u¿ywane samodzielnie.
 
 Implementacja DOM (zwana równie¿ implementacj± hosta) udostêpnia
-przeparsowany dokument XML lub HTML dla dalszego przetwarzania poprzez
-interfejs DOM.
+przeanalizowany sk³adniowo dokument XML lub HTML w celu dalszego
+jego przetwarzania poprzez interfejs DOM.
 
 gdome2 w chwili obecnej wspiera nastêpuj±ce modu³y rekomendacji DOM2:
 "Core", "XML", "Events" oraz "MutationEvents" (wiêcej informacji mo¿na
 uzyskaæ pod adresem http://www.w3.org/TR/DOM-Level-2-Core/ oraz
 http://www.w3.org/TR/DOM-Level-2-Events/), a w przysz³o¶ci ma zostaæ
-pe³n± implementacj± standardu DOM Poziom 2.
+pe³n± implementacj± standardu poziomu 2 DOM.
 
-gdome2 wspiera równie¿ czê¶ciowo DOM Poziom 3, konkretnie XPath.
+gdome2 wspiera równie¿ czê¶ciowo poziom 3 DOM, konkretnie XPath.
 
 %package static
 Summary:	Static libraries for gdome2
