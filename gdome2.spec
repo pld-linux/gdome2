@@ -123,23 +123,22 @@ oprogramowania opartego o gdome2.
 %build
 rm -f missing
 %{__libtoolize}
-aclocal
+%{__aclocal}
 %{__autoconf}
-automake -a -c
-
+%{__automake}
 %configure
 
 %{__make}
 
 %install
 rm -rf $RPM_BUILD_ROOT
+
 %{__make} install DESTDIR=$RPM_BUILD_ROOT
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
-%post -p /sbin/ldconfig
-
+%post   -p /sbin/ldconfig
 %postun -p /sbin/ldconfig
 
 %files
@@ -150,10 +149,10 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc AUTHORS MAINTAINERS ChangeLog README gtk-doc/html/*.html
 %attr(755,root,root) %{_bindir}/gdome-config
-%{_includedir}/*
 %attr(755,root,root) %{_libdir}/lib*.so
-%{_libdir}/lib*.la
-%{_libdir}/*.sh
+%attr(755,root,root) %{_libdir}/lib*.la
+%attr(755,root,root) %{_libdir}/*.sh
+%{_includedir}/*
 %{_mandir}/man1/gdome-config.1*
 
 %files static
