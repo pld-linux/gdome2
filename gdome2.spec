@@ -1,14 +1,14 @@
 Summary:	DOM level2 library for accessing XML files
 Summary(pl):	Biblioteka dostêpu do plików XML, DOM poziom 2
 Name:		gdome2
-Version:	0.7.1
+Version:	0.7.2
 Release:	1
 License:	LGPL
 Group:		Libraries
 URL:		http://phd.cs.unibo.it/gdome2/
 Source0:	http://phd.cs.unibo.it/gdome2/tarball/%{name}-%{version}.tar.gz
 Patch0:		%{name}-ac.patch
-BuildRequires:	libxml2-devel >= 2.4.19
+BuildRequires:	libxml2-devel >= 2.4.21
 BuildRequires:	glib-devel >= 1.2.10
 BuildRequires:	autoconf
 BuildRequires:	automake
@@ -58,7 +58,7 @@ Summary(pl):	Pliki nag³ówkowe gdome2
 Group:		Development/Libraries
 Requires:	%{name} = %{version}
 Requires:	glib-devel >= 1.2.10
-Requires:	libxml2-devel >= 2.4.19
+Requires:	libxml2-devel >= 2.4.21
 
 %description devel
 This package contains the header files and configuration scripts for
