@@ -126,8 +126,7 @@ rm -f missing
 %{__aclocal}
 %{__autoconf}
 %{__automake}
-%configure \
-	--enable-glib-2=yes
+%configure
 
 %{__make}
 
