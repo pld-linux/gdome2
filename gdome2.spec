@@ -133,7 +133,7 @@ rm -f missing
 %{__autoconf}
 %{__automake}
 %configure \
-	%{!?with_glib1:--enable-glib-2}
+	%{!?with_glib1:GLIB_CONFIG="pkg-config glib-2.0" --enable-glib-2}
 
 %{__make}
 
