@@ -1,7 +1,7 @@
 Summary:	DOM level2 library for accessing XML files
 Summary(pl):	Biblioteka dostêpu do plików XML, DOM poziom 2
 Name:		gdome2
-Version:	0.7.3
+Version:	0.7.4
 Release:	1
 License:	LGPL
 Group:		Libraries
@@ -126,7 +126,8 @@ rm -f missing
 %{__aclocal}
 %{__autoconf}
 %{__automake}
-%configure
+%configure \
+	--enable-glib-2=yes
 
 %{__make}
 
@@ -154,6 +155,8 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_libdir}/*.sh
 %{_includedir}/*
 %{_mandir}/man1/gdome-config.1*
+%{_aclocaldir}/%{name}.m4
+%{_pkgconfigdir}/%{name}.pc
 
 %files static
 %defattr(644,root,root,755)
