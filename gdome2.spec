@@ -7,6 +7,7 @@ License:	LGPL
 Group:		Libraries
 URL:		http://gdome2.cs.unibo.it/
 Source0:	http://gdome2.cs.unibo.it/tarball/%{name}-%{version}.tar.gz
+# Source0-md5:	143db4b396b968288c154332cae186c8
 Patch0:		%{name}-ac.patch
 BuildRequires:	libxml2-devel >= 2.4.26
 BuildRequires:	glib-devel >= 1.2.10
