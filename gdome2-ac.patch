@@ -1,0 +1,12 @@
+diff -ur gdome2-0.7.1/configure.in gdome2-0.7.1-/configure.in
+--- gdome2-0.7.1/configure.in	Wed Apr  3 22:13:33 2002
++++ gdome2-0.7.1-/configure.in	Sun May 19 23:53:35 2002
+@@ -138,8 +138,6 @@
+ libgdome/gdomecore/Makefile
+ libgdome/events/Makefile
+ libgdome/xpath/Makefile
+-libgdome/traversal/Makefile
+-dnl libgdome/gdomehtml/Makefile
+ test/Makefile
+ test/apigen/Makefile
+ gtk-doc/Makefile
