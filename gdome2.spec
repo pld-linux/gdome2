@@ -1,26 +1,25 @@
 #
 # Conditional build:
 # (to be changed to bcond_with when glib2 support is finished)
-%bcond_without	glib1	# don't use glib 1.2 instead of 2.x
+%bcond_with	glib1	# use glib 1.2 instead of 2.x
 #
 Summary:	DOM level2 library for accessing XML files
 Summary(pl):	Biblioteka dostêpu do plików XML, DOM poziom 2
 Name:		gdome2
-Version:	0.7.4
+Version:	0.8.0
 Release:	1
 License:	LGPL
 Group:		Libraries
-URL:		http://gdome2.cs.unibo.it/
 Source0:	http://gdome2.cs.unibo.it/tarball/%{name}-%{version}.tar.gz
-# Source0-md5:	143db4b396b968288c154332cae186c8
+# Source0-md5:	c6c7d3445ae420668daaad949f3c4a0e
 Patch0:		%{name}-ac.patch
-BuildRequires:	libxml2-devel >= 2.4.26
-%{!?with_glib1:BuildRequires:	glib2-devel}
-%{?with_glib1:BuildRequires:	glib-devel >= 1.2.10}
-BuildRequires:	glib2-devel
+URL:		http://gdome2.cs.unibo.it/
 BuildRequires:	autoconf
 BuildRequires:	automake
+%{?with_glib1:BuildRequires:	glib-devel >= 1.2.10}
+%{!?with_glib1:BuildRequires:	glib2-devel}
 BuildRequires:	libtool
+BuildRequires:	libxml2-devel >= 2.4.26
 %{?with_glib1:Requires:	glib >= 1.2.10}
 Requires:	libxml2 >= 2.4.26
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -65,8 +64,8 @@ Summary:	Development files for gdome2
 Summary(pl):	Pliki nag³ówkowe gdome2
 Group:		Development/Libraries
 Requires:	%{name} = %{version}
-%{!?with_glib1:Requires:	glib2-devel}
 %{?with_glib1:Requires:	glib-devel >= 1.2.10}
+%{!?with_glib1:Requires:	glib2-devel}
 Requires:	libxml2-devel >= 2.4.21
 
 %description devel
@@ -134,7 +133,7 @@ rm -f missing
 %{__autoconf}
 %{__automake}
 %configure \
-	%{!?with_glib1:GLIB_2=yes}
+	%{!?with_glib1:--enable-glib-2}
 
 %{__make}
 
@@ -142,7 +141,7 @@ rm -f missing
 rm -rf $RPM_BUILD_ROOT
 
 %{__make} install \
-	 DESTDIR=$RPM_BUILD_ROOT
+	DESTDIR=$RPM_BUILD_ROOT
 
 %clean
 rm -rf $RPM_BUILD_ROOT
