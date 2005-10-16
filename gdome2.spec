@@ -1,26 +1,20 @@
-#
-# Conditional build:
-%bcond_with	glib1	# use glib 1.2 instead of 2.x
-#
 Summary:	DOM level2 library for accessing XML files
 Summary(pl):	Biblioteka dostêpu do plików XML, DOM poziom 2
 Name:		gdome2
 Version:	0.8.1
-Release:	4
+Release:	5
 License:	LGPL
 Group:		Libraries
 Source0:	http://gdome2.cs.unibo.it/tarball/%{name}-%{version}.tar.gz
 # Source0-md5:	bfc114e59eec50cbda8e4ece751ff022
+Patch0:		%{name}-glib2.patch
 URL:		http://gdome2.cs.unibo.it/
 BuildRequires:	autoconf
 BuildRequires:	automake
-%{?with_glib1:BuildRequires:	glib-devel >= 1.2.10}
-%{!?with_glib1:BuildRequires:	glib2-devel >= 2.2.0}
+BuildRequires:	glib2-devel >= 2.2.0
 BuildRequires:	libtool
 BuildRequires:	libxml2-devel >= 2.4.26
 BuildRequires:	pkgconfig
-%{?with_glib1:Requires:	glib >= 1.2.10}
-%{!?with_glib1:Requires:	glib2 >= 2.2.0}
 Requires:	libxml2 >= 2.4.26
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -64,8 +58,7 @@ Summary:	Development files for gdome2
 Summary(pl):	Pliki nag³ówkowe gdome2
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
-%{?with_glib1:Requires:	glib-devel >= 1.2.10}
-%{!?with_glib1:Requires:	glib2-devel >= 2.2.0}
+Requires:	glib2-devel >= 2.2.0
 Requires:	libxml2-devel >= 2.4.26
 
 %description devel
@@ -124,18 +117,16 @@ oprogramowania opartego o gdome2.
 
 %prep
 %setup -q
+%patch0 -p1
 
-%{!?with_glib1:echo 'AM_DEFUN([AM_PATH_GLIB], [$3])' >> acinclude.m4}
-%{?with_glib1:echo 'AM_DEFUN([AM_PATH_GLIB_2_0], [$3]' >> acinclude.m4}
+echo 'AM_DEFUN([AM_PATH_GLIB], [$3])' >> acinclude.m4
 
 %build
 %{__libtoolize}
 %{__aclocal}
 %{__autoconf}
 %{__automake}
-%configure \
-	%{!?with_glib1:GLIB_CONFIG="pkg-config glib-2.0"} \
-	%{?with_glib1:--enable-glib-1}
+%configure
 
 %{__make}
 
