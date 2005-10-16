@@ -63,7 +63,7 @@ gdome2 wspiera równie¿ czê¶ciowo poziom 3 DOM, konkretnie XPath.
 Summary:	Development files for gdome2
 Summary(pl):	Pliki nag³ówkowe gdome2
 Group:		Development/Libraries
-Requires:	%{name} = %{version}
+Requires:	%{name} = %{version}-%{release}
 %{?with_glib1:Requires:	glib-devel >= 1.2.10}
 %{!?with_glib1:Requires:	glib2-devel >= 2.2.0}
 Requires:	libxml2-devel >= 2.4.26
@@ -113,7 +113,7 @@ gdome2 wspiera równie¿ czê¶ciowo poziom 3 DOM, konkretnie XPath.
 Summary:	Static libraries for gdome2
 Summary(pl):	Biblioteki statyczne dla gdome2
 Group:		Development/Libraries
-Requires:	%{name}-devel = %{version}
+Requires:	%{name}-devel = %{version}-%{release}
 
 %description static
 This package contains static libraries for developing with gdome2.
