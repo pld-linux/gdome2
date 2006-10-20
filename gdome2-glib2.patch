@@ -1,7 +1,7 @@
 diff -urbB gdome2-0.8.1.org/configure.in gdome2-0.8.1/configure.in
 --- gdome2-0.8.1.org/configure.in	2003-10-05 16:39:27.000000000 +0200
 +++ gdome2-0.8.1/configure.in	2005-10-16 22:21:46.704590000 +0200
-@@ -57,24 +57,10 @@
+@@ -57,24 +57,12 @@
  dnl find glib
  dnl
  
@@ -19,10 +19,12 @@ diff -urbB gdome2-0.8.1.org/configure.in gdome2-0.8.1/configure.in
 -        AM_PATH_GLIB($GLIB_MIN_VERSION,,AC_MSG_ERROR(Could not find GLIB (see config.log for details).))
 -else
  	PKG_CHECK_MODULES(GLIB, glib-2.0)
++	GLIB_CONFIG="glib-config"
  	GLIB_REQUIRED="glib-2.0"
  	GLIB_MIN_VERSION=2.2.0
          AM_PATH_GLIB_2_0($GLIB_MIN_VERSION,,AC_MSG_ERROR(Could not find GLIB (see config.log for details).))
 -fi
++AC_SUBST(GLIB_CONFIG)
  AC_SUBST(GLIB_MIN_VERSION)
  AC_SUBST(GLIB_LIBS)
  AC_SUBST(GLIB_REQUIRED)
