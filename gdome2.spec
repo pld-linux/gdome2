@@ -1,5 +1,5 @@
 Summary:	DOM level2 library for accessing XML files
-Summary(pl):	Biblioteka dostêpu do plików XML, DOM poziom 2
+Summary(pl.UTF-8):   Biblioteka dostÄ™pu do plikÃ³w XML, DOM poziom 2
 Name:		gdome2
 Version:	0.8.1
 Release:	7
@@ -36,26 +36,26 @@ full implementation of all the DOM Level2 standard.
 Now gdome2 also partially supports the XPath module from the DOM level
 3 drafts.
 
-%description -l pl
-gdome2 jest szybk±, lekk± i kompletn± implementacj± poziomu 2 DOM
-opart± o libxml2. Pomimo, ¿e gdome2 zosta³o napisane z my¶l± o
-projekcie GNOME, mo¿e byæ u¿ywane samodzielnie.
+%description -l pl.UTF-8
+gdome2 jest szybkÄ…, lekkÄ… i kompletnÄ… implementacjÄ… poziomu 2 DOM
+opartÄ… o libxml2. Pomimo, Å¼e gdome2 zostaÅ‚o napisane z myÅ›lÄ… o
+projekcie GNOME, moÅ¼e byÄ‡ uÅ¼ywane samodzielnie.
 
-Implementacja DOM (zwana równie¿ implementacj± hosta) udostêpnia
-przeanalizowany sk³adniowo dokument XML lub HTML w celu dalszego
+Implementacja DOM (zwana rÃ³wnieÅ¼ implementacjÄ… hosta) udostÄ™pnia
+przeanalizowany skÅ‚adniowo dokument XML lub HTML w celu dalszego
 jego przetwarzania poprzez interfejs DOM.
 
-gdome2 w chwili obecnej wspiera nastêpuj±ce modu³y rekomendacji DOM2:
-"Core", "XML", "Events" oraz "MutationEvents" (wiêcej informacji mo¿na
-uzyskaæ pod adresem http://www.w3.org/TR/DOM-Level-2-Core/ oraz
-http://www.w3.org/TR/DOM-Level-2-Events/), a w przysz³o¶ci ma zostaæ
-pe³n± implementacj± standardu poziomu 2 DOM.
+gdome2 w chwili obecnej wspiera nastÄ™pujÄ…ce moduÅ‚y rekomendacji DOM2:
+"Core", "XML", "Events" oraz "MutationEvents" (wiÄ™cej informacji moÅ¼na
+uzyskaÄ‡ pod adresem http://www.w3.org/TR/DOM-Level-2-Core/ oraz
+http://www.w3.org/TR/DOM-Level-2-Events/), a w przyszÅ‚oÅ›ci ma zostaÄ‡
+peÅ‚nÄ… implementacjÄ… standardu poziomu 2 DOM.
 
-gdome2 wspiera równie¿ czê¶ciowo poziom 3 DOM, konkretnie XPath.
+gdome2 wspiera rÃ³wnieÅ¼ czÄ™Å›ciowo poziom 3 DOM, konkretnie XPath.
 
 %package devel
 Summary:	Development files for gdome2
-Summary(pl):	Pliki nag³ówkowe gdome2
+Summary(pl.UTF-8):   Pliki nagÅ‚Ã³wkowe gdome2
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	glib2-devel >= 2.2.0
@@ -82,36 +82,36 @@ full implementation of all the DOM Level2 standard.
 Now gdome2 also partially supports the XPath module from the DOM level
 3 drafts.
 
-%description devel -l pl
-Pakiet ten zawiera pliki nag³ówkowe oraz skrypty konfiguracyjne
+%description devel -l pl.UTF-8
+Pakiet ten zawiera pliki nagÅ‚Ã³wkowe oraz skrypty konfiguracyjne
 potrzebne do rozwijania oprogramowania opartego o gdome2.
 
-gdome2 jest szybk±, lekk± i kompletn± implementacj± poziomu 2 DOM
-opart± o libxml2. Pomimo, ¿e gdome2 zosta³o napisane z my¶l± o
-projekcie GNOME, mo¿e byæ u¿ywane samodzielnie.
+gdome2 jest szybkÄ…, lekkÄ… i kompletnÄ… implementacjÄ… poziomu 2 DOM
+opartÄ… o libxml2. Pomimo, Å¼e gdome2 zostaÅ‚o napisane z myÅ›lÄ… o
+projekcie GNOME, moÅ¼e byÄ‡ uÅ¼ywane samodzielnie.
 
-Implementacja DOM (zwana równie¿ implementacj± hosta) udostêpnia
-przeanalizowany sk³adniowo dokument XML lub HTML w celu dalszego
+Implementacja DOM (zwana rÃ³wnieÅ¼ implementacjÄ… hosta) udostÄ™pnia
+przeanalizowany skÅ‚adniowo dokument XML lub HTML w celu dalszego
 jego przetwarzania poprzez interfejs DOM.
 
-gdome2 w chwili obecnej wspiera nastêpuj±ce modu³y rekomendacji DOM2:
-"Core", "XML", "Events" oraz "MutationEvents" (wiêcej informacji mo¿na
-uzyskaæ pod adresem http://www.w3.org/TR/DOM-Level-2-Core/ oraz
-http://www.w3.org/TR/DOM-Level-2-Events/), a w przysz³o¶ci ma zostaæ
-pe³n± implementacj± standardu poziomu 2 DOM.
+gdome2 w chwili obecnej wspiera nastÄ™pujÄ…ce moduÅ‚y rekomendacji DOM2:
+"Core", "XML", "Events" oraz "MutationEvents" (wiÄ™cej informacji moÅ¼na
+uzyskaÄ‡ pod adresem http://www.w3.org/TR/DOM-Level-2-Core/ oraz
+http://www.w3.org/TR/DOM-Level-2-Events/), a w przyszÅ‚oÅ›ci ma zostaÄ‡
+peÅ‚nÄ… implementacjÄ… standardu poziomu 2 DOM.
 
-gdome2 wspiera równie¿ czê¶ciowo poziom 3 DOM, konkretnie XPath.
+gdome2 wspiera rÃ³wnieÅ¼ czÄ™Å›ciowo poziom 3 DOM, konkretnie XPath.
 
 %package static
 Summary:	Static libraries for gdome2
-Summary(pl):	Biblioteki statyczne dla gdome2
+Summary(pl.UTF-8):   Biblioteki statyczne dla gdome2
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 
 %description static
 This package contains static libraries for developing with gdome2.
 
-%description static -l pl
+%description static -l pl.UTF-8
 Pakiet ten zawiera statyczne biblioteki potrzebne do rozwijania
 oprogramowania opartego o gdome2.
 
