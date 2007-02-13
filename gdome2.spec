@@ -1,5 +1,5 @@
 Summary:	DOM level2 library for accessing XML files
-Summary(pl.UTF-8):   Biblioteka dostępu do plików XML, DOM poziom 2
+Summary(pl.UTF-8):	Biblioteka dostępu do plików XML, DOM poziom 2
 Name:		gdome2
 Version:	0.8.1
 Release:	7
@@ -55,7 +55,7 @@ gdome2 wspiera również częściowo poziom 3 DOM, konkretnie XPath.
 
 %package devel
 Summary:	Development files for gdome2
-Summary(pl.UTF-8):   Pliki nagłówkowe gdome2
+Summary(pl.UTF-8):	Pliki nagłówkowe gdome2
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	glib2-devel >= 2.2.0
@@ -104,7 +104,7 @@ gdome2 wspiera również częściowo poziom 3 DOM, konkretnie XPath.
 
 %package static
 Summary:	Static libraries for gdome2
-Summary(pl.UTF-8):   Biblioteki statyczne dla gdome2
+Summary(pl.UTF-8):	Biblioteki statyczne dla gdome2
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 
