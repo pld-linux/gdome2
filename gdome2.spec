@@ -2,7 +2,7 @@ Summary:	DOM level2 library for accessing XML files
 Summary(pl.UTF-8):	Biblioteka dostępu do plików XML, DOM poziom 2
 Name:		gdome2
 Version:	0.8.1
-Release:	7
+Release:	8
 License:	LGPL
 Group:		Libraries
 Source0:	http://gdome2.cs.unibo.it/tarball/%{name}-%{version}.tar.gz
