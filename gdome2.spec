@@ -1,3 +1,7 @@
+#
+# Conditional build:
+%bcond_without	static_libs	# don't build static libraries
+#
 Summary:	DOM level2 library for accessing XML files
 Summary(pl.UTF-8):	Biblioteka dostępu do plików XML, DOM poziom 2
 Name:		gdome2
@@ -126,7 +130,8 @@ echo 'AM_DEFUN([AM_PATH_GLIB], [$3])' >> acinclude.m4
 %{__aclocal}
 %{__autoconf}
 %{__automake}
-%configure
+%configure \
+	%{!?with_static_libs:--disable-static}
 
 %{__make}
 
@@ -159,6 +164,8 @@ rm -rf $RPM_BUILD_ROOT
 %{_aclocaldir}/%{name}.m4
 %{_pkgconfigdir}/%{name}.pc
 
+%if %{with static_libs}
 %files static
 %defattr(644,root,root,755)
 %{_libdir}/*.a
+%endif
