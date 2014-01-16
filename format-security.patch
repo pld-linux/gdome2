@@ -1,0 +1,11 @@
+--- gdome2-0.8.1/test/bench.c.orig	2014-01-16 13:56:54.982592291 +0100
++++ gdome2-0.8.1/test/bench.c	2014-01-16 13:57:38.962349831 +0100
+@@ -81,7 +81,7 @@ void traversal (GdomeElement *el) {
+ 			break;
+ 		case GDOME_TEXT_NODE:
+ 			str = gdome_t_data ((GdomeText *)child, &exc);
+-			printf (str->str);
++			fputs (str->str, stdout);
+ 			gdome_str_unref (str);
+ 			break;
+ 		}
