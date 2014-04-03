@@ -1,12 +1,12 @@
 #
 # Conditional build:
 %bcond_without	static_libs	# don't build static libraries
-#
+
 Summary:	DOM level2 library for accessing XML files
 Summary(pl.UTF-8):	Biblioteka dostępu do plików XML, DOM poziom 2
 Name:		gdome2
 Version:	0.8.1
-Release:	11
+Release:	12
 License:	LGPL
 Group:		Libraries
 Source0:	http://gdome2.cs.unibo.it/tarball/%{name}-%{version}.tar.gz
@@ -50,8 +50,8 @@ opartą o libxml2. Pomimo, że gdome2 zostało napisane z myślą o
 projekcie GNOME, może być używane samodzielnie.
 
 Implementacja DOM (zwana również implementacją hosta) udostępnia
-przeanalizowany składniowo dokument XML lub HTML w celu dalszego
-jego przetwarzania poprzez interfejs DOM.
+przeanalizowany składniowo dokument XML lub HTML w celu dalszego jego
+przetwarzania poprzez interfejs DOM.
 
 gdome2 w chwili obecnej wspiera następujące moduły rekomendacji DOM2:
 "Core", "XML", "Events" oraz "MutationEvents" (więcej informacji można
@@ -99,8 +99,8 @@ opartą o libxml2. Pomimo, że gdome2 zostało napisane z myślą o
 projekcie GNOME, może być używane samodzielnie.
 
 Implementacja DOM (zwana również implementacją hosta) udostępnia
-przeanalizowany składniowo dokument XML lub HTML w celu dalszego
-jego przetwarzania poprzez interfejs DOM.
+przeanalizowany składniowo dokument XML lub HTML w celu dalszego jego
+przetwarzania poprzez interfejs DOM.
 
 gdome2 w chwili obecnej wspiera następujące moduły rekomendacji DOM2:
 "Core", "XML", "Events" oraz "MutationEvents" (więcej informacji można
@@ -127,6 +127,9 @@ oprogramowania opartego o gdome2.
 Summary:	API documentation for gdome2 library
 Summary(pl.UTF-8):	Dokumentacja API biblioteki gdome2
 Group:		Documentation
+%if "%{_rpmversion}" >= "5"
+BuildArch:	noarch
+%endif
 
 %description apidocs
 API documentation for gdome2 library.
