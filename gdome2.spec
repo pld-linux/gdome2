@@ -127,9 +127,7 @@ oprogramowania opartego o gdome2.
 Summary:	API documentation for gdome2 library
 Summary(pl.UTF-8):	Dokumentacja API biblioteki gdome2
 Group:		Documentation
-%if "%{_rpmversion}" >= "5"
 BuildArch:	noarch
-%endif
 
 %description apidocs
 API documentation for gdome2 library.
