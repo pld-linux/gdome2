@@ -1,13 +1,13 @@
 #
 # Conditional build:
-%bcond_without	static_libs	# don't build static libraries
+%bcond_without	static_libs	# static library
 
 Summary:	DOM level2 library for accessing XML files
 Summary(pl.UTF-8):	Biblioteka dostępu do plików XML, DOM poziom 2
 Name:		gdome2
 Version:	0.8.1
-Release:	14
-License:	LGPL
+Release:	15
+License:	LGPL v2.1+
 Group:		Libraries
 Source0:	http://gdome2.cs.unibo.it/tarball/%{name}-%{version}.tar.gz
 # Source0-md5:	bfc114e59eec50cbda8e4ece751ff022
@@ -163,6 +163,9 @@ rm -rf $RPM_BUILD_ROOT
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
+# obsoleted by pkg-config
+%{__rm} $RPM_BUILD_ROOT%{_libdir}/libgdome.la
+
 %clean
 rm -rf $RPM_BUILD_ROOT
 
@@ -179,7 +182,6 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_bindir}/gdome-config
 %attr(755,root,root) %{_libdir}/libgdome.so
-%{_libdir}/libgdome.la
 %attr(755,root,root) %{_libdir}/gdomeConf.sh
 %{_includedir}/libgdome
 %{_mandir}/man1/gdome-config.1*
