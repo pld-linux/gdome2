@@ -1,0 +1,10 @@
+--- gdome2-0.8.1/libgdome/xpath/gdome-xpath-xpnsresolv.h.orig	2002-02-22 22:15:53.000000000 +0100
++++ gdome2-0.8.1/libgdome/xpath/gdome-xpath-xpnsresolv.h	2023-06-04 06:57:15.225153400 +0200
+@@ -42,6 +42,6 @@ void gdome_xpath_xpnsresolv_ref (GdomeXP
+ void gdome_xpath_xpnsresolv_unref (GdomeXPathNSResolver *self, GdomeException *exc);
+ GdomeDOMString * gdome_xpath_xpnsresolv_lookupNamespaceURI( GdomeXPathNSResolver *self, GdomeDOMString *prefix, GdomeException *exc);
+ 
+-const GdomeXPathNSResolverVtab gdome_xpath_xpnsresolv_vtab;
++extern const GdomeXPathNSResolverVtab gdome_xpath_xpnsresolv_vtab;
+ 
+ #endif /* GDOME_XPNSRESOLV_FILE */

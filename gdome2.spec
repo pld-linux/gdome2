@@ -6,7 +6,7 @@ Summary:	DOM level2 library for accessing XML files
 Summary(pl.UTF-8):	Biblioteka dostępu do plików XML, DOM poziom 2
 Name:		gdome2
 Version:	0.8.1
-Release:	15
+Release:	16
 License:	LGPL v2.1+
 Group:		Libraries
 Source0:	http://gdome2.cs.unibo.it/tarball/%{name}-%{version}.tar.gz
@@ -15,6 +15,7 @@ Patch0:		%{name}-glib2.patch
 Patch1:		%{name}-build_fix.patch
 Patch2:		format-security.patch
 Patch3:		%{name}-destdir.patch
+Patch4:		%{name}-no-common.patch
 URL:		http://gdome2.cs.unibo.it/
 BuildRequires:	autoconf
 BuildRequires:	automake
@@ -141,6 +142,7 @@ Dokumentacja API biblioteki gdome2.
 %patch1 -p1
 %patch2 -p1
 %patch3 -p1
+%patch4 -p1
 
 # disable glib 1.x in order to force 2.x
 echo 'AM_DEFUN([AM_PATH_GLIB], [$3])' >> acinclude.m4
